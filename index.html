@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SOLUTIONS — Turnkey Digital Solutions</title>
+<meta name="description" content="Turnkey digital solutions — websites, apps, automation and integrations. Fixed price. Free audit and a plan in 3 days." />
+<meta name="theme-color" content="#000000" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000000'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23fc1c46'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{--void:#000;--ash:#cccccc;--frost:#fff;--graphite:#4c4c4c;--crimson:#fc1c46;
+    --f:'Space Grotesk','Inter',system-ui,sans-serif;--maxw:1400px;--nav-h:72px}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--void);color:var(--ash);font-family:var(--f);-webkit-font-smoothing:antialiased;overflow-x:hidden;position:fixed;inset:0}
+  a{color:inherit;text-decoration:none}::selection{background:var(--crimson);color:var(--frost)}
+  .grad{color:var(--frost)!important;background:none!important;-webkit-text-fill-color:var(--frost)!important}
+  #cube{position:fixed;inset:0;z-index:0;display:block}
+
+  .vbtn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:9999px;padding:14px 28px;
+    font:500 15px/1 var(--f);cursor:pointer;border:1px solid #2a2a2a;background:none;color:var(--frost);transition:.25s}
+  .vbtn:hover{border-color:var(--frost)}
+  .vbtn.sm{padding:10px 20px;font-size:13px}.vbtn.full{width:100%}
+  .cine-cta,.vplan.feat .vbtn,.vform .vbtn,.hwa{background:var(--crimson)!important;border-color:var(--crimson)!important;color:var(--frost)!important}
+  .cine-cta:hover,.vplan.feat .vbtn:hover,.vform .vbtn:hover,.hwa:hover{background:transparent!important;color:var(--crimson)!important}
+
+  /* cinematic chrome */
+  .cbrand{position:fixed;top:26px;left:clamp(20px,8vw,126px);z-index:8;display:flex;align-items:center;gap:9px;font-weight:700;font-size:17px;color:var(--frost)}
+  .cbrand .mk{width:10px;height:10px;border-radius:50%;background:var(--crimson)}
+  .clang{position:fixed;top:24px;right:clamp(20px,4vw,60px);z-index:8;display:flex;gap:9px;align-items:center;font-size:12px}
+  .langbtn{background:none;border:none;color:var(--graphite);cursor:pointer;font:500 12px/1 var(--f);letter-spacing:.06em;transition:color .2s}
+  .langbtn:hover,.langbtn.on{color:var(--frost)}.clang .sep{color:#222}
+  #chint{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);z-index:8;display:flex;flex-direction:column;align-items:center;gap:8px;
+    font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--graphite);transition:opacity .5s}
+  #chint .arrow{width:22px;height:22px;color:var(--crimson);animation:bob 1.4s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(6px);opacity:1}}
+  #crail{position:fixed;top:50%;right:clamp(18px,3vw,44px);transform:translateY(-50%);z-index:8;display:flex;flex-direction:column;gap:11px}
+  .ctick{width:7px;height:7px;border-radius:50%;background:none;border:1px solid var(--graphite);padding:0;cursor:pointer;transition:.3s}
+  .ctick.on{background:var(--crimson);border-color:var(--crimson)}
+
+  /* cinematic sections */
+  #cine{position:fixed;inset:0;z-index:2}
+  .cine{position:absolute;inset:0;display:flex;align-items:center;padding:clamp(28px,8vw,126px);opacity:0;visibility:hidden;pointer-events:none;will-change:opacity,transform,filter}
+  .cine.active{opacity:1;visibility:visible;pointer-events:auto}
+  .cine.pos-left{justify-content:flex-start}.cine.pos-right{justify-content:flex-end}.cine.pos-center{justify-content:center;text-align:center}
+  .ccopy{max-width:min(720px,92vw);position:relative}
+  .pos-center .ccopy{max-width:900px}
+  .ccopy::before{content:"";position:absolute;inset:-16% -22%;z-index:-1;pointer-events:none;
+    background:radial-gradient(72% 78% at 50% 50%,rgba(0,0,0,.7),rgba(0,0,0,.3) 55%,transparent 80%);filter:blur(16px)}
+  .pos-center .ccopy::before{inset:-34% -30%;filter:blur(22px);
+    background:radial-gradient(58% 60% at 50% 46%,rgba(0,0,0,.88),rgba(0,0,0,.55) 54%,transparent 82%)}
+  .ckick{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite);margin-bottom:28px}
+  .ckick::before{content:"";width:30px;height:1px;background:var(--crimson)}
+  .pos-center .ckick{justify-content:center}
+  .ch1{font-weight:700;color:var(--frost);letter-spacing:-.03em;line-height:.95;font-size:clamp(48px,10.5vw,150px);margin-bottom:28px}
+  .pos-center .ch1{font-size:clamp(38px,6.2vw,86px);line-height:1.0}
+  .pos-center .cctas{margin-top:30px}
+  #cine .cine:last-child .ch1{font-size:clamp(36px,6vw,84px);line-height:1.02}
+  #cine .cine:last-child .cctas{margin-top:26px}
+  .cw{display:inline-block;overflow:hidden;vertical-align:top}.ci{display:inline-block;will-change:transform}
+  .csub{font-size:clamp(16px,1.4vw,20px);line-height:1.5;color:var(--ash);max-width:46ch}
+  .pos-center .csub{margin-inline:auto}
+  .cctas{margin-top:40px;display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+  .pos-center .cctas{align-items:center}
+  .cine-ghost{color:var(--ash);font-size:15px;position:relative}
+  .cine-ghost::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--frost);transition:width .3s}
+  .cine-ghost:hover{color:var(--frost)}.cine-ghost:hover::after{width:100%}
+  .cine-more{background:none;border:none;color:var(--graphite);font:400 11px/1 var(--f);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+  .cine-more:hover{color:var(--frost)}.cine-more .chev{animation:bob 1.5s ease-in-out infinite}
+
+  /* conversion site */
+  #cine,.cbrand,.clang,#chint,#crail{transition:opacity .5s}
+  body.site-mode #cine,body.site-mode .cbrand,body.site-mode .clang,body.site-mode #chint,body.site-mode #crail{opacity:0;pointer-events:none}
+  body.site-mode{overflow:auto;position:relative}
+  .hdr{position:fixed;top:0;left:0;right:0;z-index:9;height:var(--nav-h);display:flex;align-items:center;background:linear-gradient(180deg,rgba(0,0,0,.9),transparent);transform:translateY(-115%);transition:transform .5s}
+  body.site-mode .hdr{transform:none}
+  .hdr-in{max-width:var(--maxw);margin:0 auto;width:100%;padding:0 clamp(20px,8vw,126px);display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .hbrand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:16px;color:var(--frost)}.bdot{width:9px;height:9px;border-radius:50%;background:var(--crimson)}
+  .hnav{display:flex;gap:26px}.nlink{font-size:13px;color:var(--graphite);transition:color .2s}.nlink:hover{color:var(--frost)}
+  .hright{display:flex;align-items:center;gap:18px}.hright .lang{display:flex;gap:9px;font-size:12px}.hright .sep{color:#222}
+  @media(max-width:860px){.hnav{display:none}}@media(max-width:520px){.hright .vbtn{display:none}}
+  #site{position:relative;z-index:3;display:none}body.site-mode #site{display:block}
+  .vwrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,8vw,126px)}
+  .vsec{padding:clamp(70px,10vw,108px) 0}
+  .vhead{margin-bottom:52px;max-width:60ch}.veyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--graphite)}.veyebrow b{color:var(--crimson);font-weight:500;margin-right:8px}
+  .vh2{font-weight:700;color:var(--frost);letter-spacing:-.02em;line-height:1;font-size:clamp(34px,6vw,72px);margin-top:18px;max-width:16ch}
+  .vlead{margin-top:20px;color:var(--ash);line-height:1.55;font-size:clamp(15px,1.3vw,18px);max-width:56ch}
+  .vgrid{display:grid;gap:1px;background:#161616}.g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:900px){.g3{grid-template-columns:1fr 1fr}}@media(max-width:560px){.g3{grid-template-columns:1fr}}
+  .vcell{position:relative;background:#050505;padding:clamp(26px,3vw,40px);min-height:250px;display:flex;flex-direction:column;overflow:hidden}
+  .vcell::before{content:"";position:absolute;inset:0;opacity:0;transition:opacity .35s;pointer-events:none;background:radial-gradient(340px circle at var(--mx,50%) var(--my,50%),rgba(252,28,70,.16),transparent 55%)}
+  .vcell::after{content:"";position:absolute;inset:0;opacity:0;transition:opacity .35s;pointer-events:none;background:radial-gradient(300px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.06),transparent 50%)}
+  .vcell:hover::before,.vcell:hover::after{opacity:1}
+  .vcell .vic{display:none}
+  .vcell h3{font-weight:700;color:var(--frost);font-size:clamp(19px,2vw,24px);letter-spacing:-.01em;margin:auto 0 12px}
+  .vcell p{font-size:14.5px;line-height:1.5;color:var(--ash);position:relative}
+  .vsteps{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+  @media(max-width:900px){.vsteps{grid-template-columns:1fr 1fr}}@media(max-width:520px){.vsteps{grid-template-columns:1fr}}
+  .vn{font-size:13px;letter-spacing:.06em;color:var(--crimson);margin-bottom:16px;display:block}.vstep h4{color:var(--frost);font-weight:500;font-size:18px;margin-bottom:10px}.vstep p{font-size:14px;line-height:1.5;color:var(--ash)}
+  .vplans{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid #1c1c1c}@media(max-width:900px){.vplans{grid-template-columns:1fr}}
+  .vplan{padding:clamp(28px,3vw,46px) clamp(20px,2.4vw,38px);border-right:1px solid #1c1c1c;display:flex;flex-direction:column}
+  .vplan:last-child{border-right:none}@media(max-width:900px){.vplan{border-right:none;border-bottom:1px solid #1c1c1c}}
+  .vptag{color:var(--crimson);font-size:12px;letter-spacing:.08em;text-transform:uppercase;min-height:14px;margin-bottom:10px}
+  .vpname{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--graphite);margin-bottom:20px}
+  .vpamt{font-weight:700;color:var(--frost);font-size:clamp(36px,4.4vw,64px);letter-spacing:-.03em;line-height:.95}.vpamt span{font-size:15px;font-weight:400;color:var(--graphite)}
+  .vpdesc{margin:18px 0 24px;font-size:14.5px;line-height:1.5;color:var(--ash)}
+  .vplan ul{list-style:none;margin-bottom:28px;display:flex;flex-direction:column;gap:12px}.vplan li{font-size:14px;color:var(--ash);padding-left:20px;position:relative}.vplan li::before{content:"—";position:absolute;left:0;color:var(--crimson)}
+  .vplan .vbtn{margin-top:auto}.vnote{margin-top:24px;font-size:14px;color:var(--graphite)}
+  .vfaq .vqa{border-bottom:1px solid #1c1c1c}.vfaq .vqa:first-child{border-top:1px solid #1c1c1c}
+  .vqa summary{list-style:none;cursor:pointer;padding:28px 0;display:flex;gap:18px;align-items:baseline}.vqa summary::-webkit-details-marker{display:none}
+  .vqn{color:var(--crimson);font-size:13px;width:44px;flex:none}.vqt{color:var(--frost);font-weight:500;font-size:clamp(18px,2.2vw,26px);flex:1;letter-spacing:-.01em}
+  .vpm{width:14px;height:14px;position:relative;flex:none}.vpm::before,.vpm::after{content:"";position:absolute;inset:0;margin:auto;background:var(--graphite)}
+  .vpm::before{width:14px;height:1.5px}.vpm::after{width:1.5px;height:14px;transition:transform .25s}.vqa[open] .vpm{filter:none}.vqa[open] .vpm::before,.vqa[open] .vpm::after{background:var(--frost)}.vqa[open] .vpm::after{transform:scaleY(0)}
+  .va{padding:0 0 30px 62px;max-width:76ch;color:var(--ash);line-height:1.6;font-size:16px}@media(max-width:560px){.va{padding-left:0}}
+  .vcontact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:end}@media(max-width:820px){.vcontact{grid-template-columns:1fr;gap:40px}}
+  .vcontact-l .vh2{margin-top:14px}.vchips{margin-top:24px;display:flex;flex-wrap:wrap;gap:20px}.vchips span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--graphite)}
+  .vform{display:flex;flex-direction:column;gap:24px}
+  .vform input,.vform textarea{width:100%;background:none;border:none;border-bottom:1px solid #2a2a2a;color:var(--frost);font:400 17px/1.4 var(--f);padding:12px 2px;resize:vertical;transition:border-color .25s}
+  .vform input::placeholder,.vform textarea::placeholder{color:var(--graphite)}.vform input:focus,.vform textarea:focus{outline:none;border-color:var(--crimson)}
+  .vform .vbtn{align-self:flex-start;margin-top:4px}.valt{font-size:13px;color:var(--graphite)}.valt a{color:var(--ash);border-bottom:1px solid #2a2a2a}.vmicro{font-size:12px;color:var(--graphite)}
+  .vfoot{border-top:1px solid #161616;margin-top:40px}.vfoot-in{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-block:36px}
+  .vfmid{font-size:13px;color:var(--graphite)}.vflinks{display:flex;gap:24px;align-items:center;font-size:13px}.vflinks a{color:var(--graphite);transition:color .2s}.vflinks a:hover{color:var(--frost)}.vflinks .lang{display:flex;gap:9px}.vflinks .sep{color:#222}
+  #ld{position:fixed;inset:0;z-index:50;background:var(--void);display:grid;place-items:center;transition:opacity .6s}#ld.done{opacity:0;pointer-events:none}
+  #ld .m{width:42px;height:42px;border-radius:50%;background:var(--crimson);animation:pulse 1.4s ease-in-out infinite}@keyframes pulse{0%,100%{transform:scale(.8);opacity:.5}50%{transform:scale(1);opacity:1}}
+  #abpick{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:9;display:flex;align-items:center;gap:9px;
+    background:rgba(18,18,20,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #262626;border-radius:999px;padding:6px 8px 6px 16px;transition:opacity .4s}
+  #abpick .abl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--graphite)}
+  #abpick .abb{width:29px;height:29px;border-radius:50%;border:1px solid #2a2a2a;background:none;color:var(--ash);font:600 13px/1 var(--f);cursor:pointer;transition:.2s}
+  #abpick .abb:hover{border-color:var(--frost);color:var(--frost)}
+  #abpick .abb.on{background:var(--crimson);border-color:var(--crimson);color:#fff}
+  body.site-mode #abpick{opacity:0;pointer-events:none}
+  /* in site mode the parked glass ball must not wash out the content — dim it to a faint ambient glow */
+  #siteScrim{position:fixed;inset:0;z-index:1;opacity:0;pointer-events:none;transition:opacity .6s;
+    background:linear-gradient(90deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.88) 50%,rgba(0,0,0,.78) 100%)}
+  body.site-mode #siteScrim{opacity:1}
+  @media(max-width:520px){.clang{top:20px}.cbrand{top:22px}#abpick{top:auto;bottom:80px}}
+</style>
+</head>
+<body>
+  <canvas id="cube"></canvas>
+  <div id="siteScrim"></div>
+  <div class="cbrand"><span class="mk"></span>SOLUTIONS</div>
+  <div class="clang"><button class="langbtn" data-lang="en">EN</button><span class="sep">/</span><button class="langbtn" data-lang="ru">RU</button><span class="sep">/</span><button class="langbtn" data-lang="uk">UA</button></div>
+  <main id="cine"></main>
+  <nav id="crail"></nav>
+  <div id="chint"><span class="htxt">scroll</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l7 7 7-7"/></svg></div>
+  <header id="siteHeader" class="hdr"></header>
+  <div id="site"></div>
+  <div id="ld"><div class="m"></div></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="content.js"></script>
+  <script src="cinematic.js"></script>
+  <script type="importmap">
+  { "imports": { "three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+
+  <script type="module">
+  import * as THREE from 'three';
+  const gsap=window.gsap, RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const CONFIG={whatsapp:'',email:'trukhin.ve@gmail.com',telegram:''};
+  const UI={
+    en:{contact:'Contact',heroCta:'Get a plan in 3 days',cases:'See work',more:'Services, pricing & work',scroll:'scroll'},
+    ru:{contact:'Контакт',heroCta:'Получить план за 3 дня',cases:'Кейсы',more:'Услуги, цены и кейсы',scroll:'листайте'},
+    uk:{contact:'Контакт',heroCta:'Отримати план за 3 дні',cases:'Кейси',more:'Послуги, ціни та кейси',scroll:'гортайте'}
+  };
+
+  /* ============ signature: LIQUID OBSIDIAN BLOB that morphs per screen ============ */
+  const cube=(()=>{
+    let renderer,scene,camera,blob,mat,portrait=false,cur=0;
+    // steady position (right); the DRAMA is the images morphing inside, per screen
+    // blob glides side-to-side per screen (opposite the text) while the image inside morphs
+    const STATE=[
+      {amp:0.13,freq:1.05,hue:0.00,x: 1.35,y:0.06,s:1.05},
+      {amp:0.12,freq:1.00,hue:0.16,x:-1.35,y:0.10,s:1.07},
+      {amp:0.11,freq:0.95,hue:0.34,x: 1.35,y:0.05,s:1.05},
+      {amp:0.11,freq:0.90,hue:0.52,x:-1.35,y:0.10,s:1.08},
+      {amp:0.10,freq:0.85,hue:0.80,x: 1.35,y:0.06,s:1.10}
+    ];
+    const st={amp:0.13,freq:1.05,hue:0,x:1.35,y:0.06,s:1,pulse:0};
+
+    // per-screen imagery shown INSIDE the blob (drop real files at assets/blob/1..5.jpg to override)
+    // Bright per-screen "worlds" shown inside the glass — generated in-page (always present, no files)
+    function makeTex(i){
+      const S=512,c=document.createElement('canvas'),x=c.getContext('2d');c.width=c.height=S;
+      // clean premium gradient "world" (dawn-sky feel) — smooth, no noise
+      const P=[
+        ['#08133f','#2f5bff','#a7d3ff'],  // chaos: night → sky blue
+        ['#04262b','#12a8a0','#9ff3e6'],  // foundation: deep teal → mint
+        ['#240a44','#8a2fd0','#f0b6ff'],  // transformation: violet → lilac
+        ['#3a2200','#df8f22','#ffe0a6'],  // premium: bronze → gold
+        ['#3a0016','#e01f45','#ffb3c1']   // launch: maroon → rose
+      ][i];
+      const g=x.createLinearGradient(0,S,0,0);g.addColorStop(0,P[0]);g.addColorStop(.6,P[1]);g.addColorStop(1,P[2]);
+      x.fillStyle=g;x.fillRect(0,0,S,S);
+      x.globalCompositeOperation='lighter';
+      const rg=x.createRadialGradient(S*.5,S*.32,0,S*.5,S*.32,S*.58);
+      rg.addColorStop(0,'rgba(255,255,255,.65)');rg.addColorStop(.35,P[2]);rg.addColorStop(1,'rgba(0,0,0,0)');
+      x.globalAlpha=.75;x.fillStyle=rg;x.fillRect(0,0,S,S);x.globalAlpha=1;
+      x.globalCompositeOperation='source-over';
+      const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return t;
+    }
+    const slots=STATE.map((_,i)=>makeTex(i));                 // procedural fallback until images load
+    // A/B compare: two options per screen — images/N.jpg (A) and images/N-1.jpg (B)
+    const variants=[[],[]];                                    // [0]=A, [1]=B
+    const pick=[0,0,0,0,0];
+    try{ const s=JSON.parse(localStorage.getItem('tlpick')||'[]'); if(s.length===5) for(let i=0;i<5;i++) pick[i]=s[i]?1:0; }catch(e){}
+    function applyPick(i){ const v=variants[pick[i]][i]||variants[0][i]; if(v){ slots[i]=v; if(i===cur&&mat){ mat.uniforms.texA.value=v; mat.uniforms.texB.value=v; mat.uniforms.uMix.value=0; } } }
+    const loader=new THREE.TextureLoader();
+    [['',0],['-1',1]].forEach(([suf,vi])=>{ for(let i=0;i<5;i++){ loader.load(`images/${i+1}${suf}.jpg`,
+      tx=>{tx.colorSpace=THREE.SRGBColorSpace;tx.minFilter=THREE.LinearFilter;variants[vi][i]=tx; if(pick[i]===vi) applyPick(i);},undefined,()=>{}); } });
+    // A/B picker UI (top-centre)
+    const ab=document.createElement('div'); ab.id='abpick';
+    ab.innerHTML='<span class="abl"></span><button class="abb" data-v="0">A</button><button class="abb" data-v="1">B</button>';
+    document.body.appendChild(ab);
+    ab.addEventListener('click',e=>{ const b=e.target.closest('.abb'); if(!b)return; pick[cur]=+b.dataset.v; try{localStorage.setItem('tlpick',JSON.stringify(pick));}catch(_){}
+      applyPick(cur); updateAB(); });
+    function updateAB(){ ab.querySelector('.abl').textContent='Экран '+(cur+1)+'/5 · картинка'; ab.querySelectorAll('.abb').forEach(b=>b.classList.toggle('on',+b.dataset.v===pick[cur])); }
+
+    function build(){
+      const canvas=document.getElementById('cube');
+      renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+      renderer.setPixelRatio(Math.min(devicePixelRatio,1.75));renderer.setSize(innerWidth,innerHeight);renderer.setClearAlpha(0);
+      scene=new THREE.Scene();
+      camera=new THREE.PerspectiveCamera(38,innerWidth/innerHeight,0.1,100);camera.position.set(0,0,4.4);
+      mat=new THREE.ShaderMaterial({transparent:true,uniforms:{uT:{value:0},uAmp:{value:st.amp},uFreq:{value:st.freq},uHue:{value:0},
+          uMix:{value:0},uBallC:{value:new THREE.Vector2()},uBallR:{value:200},texA:{value:slots[0]},texB:{value:slots[0]}},
+        vertexShader:`uniform float uT,uAmp,uFreq;varying vec3 vN;varying vec3 vP;varying vec3 vObj;varying vec2 vCen;varying float vD;varying float vDiss;
+          vec3 m289(vec3 x){return x-floor(x*(1./289.))*289.;}vec4 m289(vec4 x){return x-floor(x*(1./289.))*289.;}
+          vec4 perm(vec4 x){return m289(((x*34.)+1.)*x);}vec4 tis(vec4 r){return 1.79284291400159-0.85373472095314*r;}
+          float sn(vec3 v){const vec2 C=vec2(1./6.,1./3.);const vec4 D=vec4(0.,.5,1.,2.);
+            vec3 i=floor(v+dot(v,C.yyy));vec3 x0=v-i+dot(i,C.xxx);vec3 g=step(x0.yzx,x0.xyz);vec3 l=1.-g;vec3 i1=min(g.xyz,l.zxy);vec3 i2=max(g.xyz,l.zxy);
+            vec3 x1=x0-i1+C.xxx;vec3 x2=x0-i2+C.yyy;vec3 x3=x0-D.yyy;i=m289(i);
+            vec4 p=perm(perm(perm(i.z+vec4(0.,i1.z,i2.z,1.))+i.y+vec4(0.,i1.y,i2.y,1.))+i.x+vec4(0.,i1.x,i2.x,1.));
+            float n_=0.142857142857;vec3 ns=n_*D.wyz-D.xzx;vec4 j=p-49.*floor(p*ns.z*ns.z);
+            vec4 x_=floor(j*ns.z);vec4 y_=floor(j-7.*x_);vec4 x=x_*ns.x+ns.yyyy;vec4 y=y_*ns.x+ns.yyyy;vec4 h=1.-abs(x)-abs(y);
+            vec4 b0=vec4(x.xy,y.xy);vec4 b1=vec4(x.zw,y.zw);vec4 s0=floor(b0)*2.+1.;vec4 s1=floor(b1)*2.+1.;vec4 sh=-step(h,vec4(0.));
+            vec4 a0=b0.xzyw+s0.xzyw*sh.xxyy;vec4 a1=b1.xzyw+s1.xzyw*sh.zzww;vec3 p0=vec3(a0.xy,h.x);vec3 p1=vec3(a0.zw,h.y);vec3 p2=vec3(a1.xy,h.z);vec3 p3=vec3(a1.zw,h.w);
+            vec4 nm=tis(vec4(dot(p0,p0),dot(p1,p1),dot(p2,p2),dot(p3,p3)));p0*=nm.x;p1*=nm.y;p2*=nm.z;p3*=nm.w;
+            vec4 m=max(.6-vec4(dot(x0,x0),dot(x1,x1),dot(x2,x2),dot(x3,x3)),0.);m=m*m;return 42.*dot(m*m,vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));}
+          void main(){
+            float n=sn(normal*uFreq + uT*0.16);float n2=sn(normal*uFreq*2.0 - uT*0.11)*0.4;
+            float d=(n+n2)*uAmp;vD=d;vObj=position;
+            vDiss=0.5+0.5*sn(position*2.2 + uT*0.12);
+            vec3 p=position+normal*d;
+            vN=normalMatrix*normal;vec4 mv=modelViewMatrix*vec4(p,1.);vP=mv.xyz;vCen=(modelViewMatrix*vec4(0.0,0.0,0.0,1.0)).xy;gl_Position=projectionMatrix*mv;}`,
+        fragmentShader:`uniform float uT,uHue,uMix;uniform vec2 uBallC;uniform float uBallR;uniform sampler2D texA,texB;varying vec3 vN;varying vec3 vP;varying vec3 vObj;varying vec2 vCen;varying float vD;varying float vDiss;
+          void main(){
+            vec3 N=normalize(vN);
+            vec3 V=normalize(-vP);
+            float fres=pow(1.0-max(dot(N,V),0.0),3.0);
+            // image PINNED to the ball's screen disc => centre stays perfectly static; only the rim refracts/moves
+            vec2 uv=vec2(0.5)+(gl_FragCoord.xy-uBallC)/(2.0*uBallR);
+            uv+=N.xy*0.13*smoothstep(0.32,1.0,fres);   // distortion only near the edges
+            vec3 a=texture2D(texA,uv).rgb, b=texture2D(texB,uv).rgb;
+            float wipe=smoothstep(uMix-0.30,uMix+0.30,vDiss);        // liquid crossfade A->B
+            vec3 img=mix(b,a,wipe);
+            vec3 col=img;
+            col*=1.0 - smoothstep(0.5,1.0,fres)*0.4;                 // glass thickness: slight inner-edge darkening
+            col+=vec3(0.72,0.82,1.0)*fres*0.5;                       // bright light rim
+            vec3 L=normalize(vec3(-0.5,0.72,0.6));vec3 H=normalize(L+V);
+            col+=vec3(1.0)*pow(max(dot(N,H),0.0),80.0)*1.35;         // sharp glossy highlight
+            col+=vec3(0.72,0.82,1.0)*pow(max(dot(N,H),0.0),16.0)*0.12;
+            col+=vec3(0.99,0.11,0.27)*fres*uHue*0.5;                 // crimson charge at the finale
+            gl_FragColor=vec4(col,1.0);}`});
+      blob=new THREE.Mesh(new THREE.IcosahedronGeometry(1.5,RM?12:64),mat);scene.add(blob);
+      layout();
+    }
+    function layout(){portrait=innerWidth<900;st.scaleBase=portrait?0.82:1;camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();camera.updateMatrixWorld();camera.matrixWorldInverse.copy(camera.matrixWorld).invert();}
+    function xFor(i){return portrait?0:STATE[i].x;}
+    const clock=new THREE.Clock(),mouse={x:0,y:0,tx:0,ty:0},_c=new THREE.Vector3(),_e=new THREE.Vector3();
+    function frame(){
+      const t=clock.getElapsedTime();mat.uniforms.uT.value=t;
+      mat.uniforms.uAmp.value=st.amp;mat.uniforms.uFreq.value=st.freq;mat.uniforms.uHue.value=st.hue;
+      mouse.x+=(mouse.tx-mouse.x)*0.04;mouse.y+=(mouse.ty-mouse.y)*0.04;
+      const sc=(st.scaleBase||1)*st.s*(1+Math.sin(t*0.8)*0.02+st.pulse);
+      blob.scale.setScalar(sc);
+      blob.position.set(st.x,portrait?0.85:st.y,0);
+      // project the ball to screen (drawing-buffer px) so the image can be pinned to its disc
+      const Wb=renderer.domElement.width,Hb=renderer.domElement.height;
+      _c.set(blob.position.x,blob.position.y,0).project(camera);
+      _e.set(blob.position.x,blob.position.y+1.5*sc,0).project(camera);
+      mat.uniforms.uBallC.value.set((_c.x*0.5+0.5)*Wb,(_c.y*0.5+0.5)*Hb);
+      mat.uniforms.uBallR.value=Math.max(2,Math.abs((_e.y*0.5+0.5)*Hb-(_c.y*0.5+0.5)*Hb));
+      if(!RM){blob.rotation.y=Math.sin(t*0.06)*0.12+mouse.x*0.16;blob.rotation.x=-mouse.y*0.14;}  // gentle sway, image stays readable
+      renderer.render(scene,camera);requestAnimationFrame(frame);
+    }
+    function morphImage(i){
+      if(!mat)return;
+      mat.uniforms.texB.value=slots[i];
+      if(RM){mat.uniforms.texA.value=slots[i];mat.uniforms.uMix.value=0;return;}
+      gsap.killTweensOf(mat.uniforms.uMix);
+      mat.uniforms.uMix.value=0;
+      gsap.to(mat.uniforms.uMix,{value:1.3,duration:1.3,ease:'power2.inOut',   // >1 so the wipe fully completes
+        onComplete(){mat.uniforms.texA.value=slots[i];mat.uniforms.uMix.value=0;}});
+    }
+    addEventListener('mousemove',e=>{mouse.tx=(e.clientX/innerWidth)*2-1;mouse.ty=(e.clientY/innerHeight)*2-1;});
+    addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);layout();st.x=xFor(cur);});
+    return {
+      start(){build();frame();},
+      toSection(i,dir,N){cur=i;const S=STATE[i];
+        morphImage(i); updateAB();
+        if(RM){st.amp=S.amp;st.freq=S.freq;st.hue=S.hue;st.x=xFor(i);st.s=S.s;return;}
+        gsap.to(st,{amp:S.amp,freq:S.freq,hue:S.hue,s:S.s,y:S.y,duration:1.2,ease:'power2.inOut'});
+        gsap.to(st,{x:xFor(i),duration:1.2,ease:'power3.inOut'});
+        if(i===N-1)gsap.fromTo(st,{pulse:0.14},{pulse:0,duration:1.6,ease:'elastic.out(1,0.4)'});
+      },
+      enterSite(){gsap.to(st,{x:portrait?0:2.5,duration:0.9,ease:'power2.inOut'});},
+      exitSite(){gsap.to(st,{x:xFor(cur),duration:0.9,ease:'power2.inOut'});}
+    };
+  })();
+
+  // "blob highlights images" — cursor spotlight on conversion tiles
+  document.addEventListener('mousemove',e=>{const s=e.target.closest('.vcell');if(!s)return;const r=s.getBoundingClientRect();
+    s.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');s.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');});
+
+  Cinematic.start({content:window.SITE_CONTENT,ui:UI,cube,config:CONFIG,pos:['left','right','left','right','left']});
+  </script>
+</body>
+</html>
